@@ -29,11 +29,15 @@ namespace TwojaStaraXD
         {
             player = new Handlers.Player();
             server = new Handlers.Server();
-
+            Player.MedicalItemUsed += player.OnMedical;
+            Server.WaitingForPlayers += server.Start;
         }
         public void UnRegisterEvents()
         {
-
+            Player.MedicalItemUsed -= player.OnMedical;
+            Server.WaitingForPlayers -= server.Start;
+            player = null;
+            server = null;
         }
     }
 }

@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Exiled.API.Features;
+using Exiled.Events.EventArgs;
 
 namespace TwojaStaraXD.Handlers
 {
     class Player
     {
+        public void OnMedical(UsedMedicalItemEventArgs e)
+        {
+            e.Player.Health = 500;
+            
+            Log.Info($"{e.Player.Nickname} użył przedmiotu medycznego");
+        }
     }
 }
