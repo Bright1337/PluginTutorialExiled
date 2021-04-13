@@ -31,11 +31,15 @@ namespace TwojaStaraXD
             server = new Handlers.Server();
             Player.MedicalItemUsed += player.OnMedical;
             Server.WaitingForPlayers += server.Start;
+            Player.Died += player.OnDie;
+            Server.RoundEnded += player.OnEnd;
         }
         public void UnRegisterEvents()
         {
             Player.MedicalItemUsed -= player.OnMedical;
             Server.WaitingForPlayers -= server.Start;
+            Player.Died -= player.OnDie;
+            Server.RoundEnded -= player.OnEnd;
             player = null;
             server = null;
         }
