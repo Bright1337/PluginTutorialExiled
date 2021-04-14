@@ -13,6 +13,6 @@ namespace TwojaStaraXD
         [Description("Włączone czy ni twoja stara to kopara rapapara rapapara")]
         public bool IsEnabled { get; set; }
         [Description("zmienna jakiegoś zjeba bo auu?")]
-        public string TwojaStara { get; set; }
+        public string TwojaStara { get; set; } = "XD";
     }
 }
