@@ -34,6 +34,8 @@ namespace TwojaStaraXD
 
 
             Player.MedicalItemUsed += player.OnMedical;
+          
+            Player.UsingMedicalItem += player.MultiuseMedkit;
             Server.WaitingForPlayers += server.Start;
             Player.Died += player.OnDie;
             Server.RoundEnded += player.OnEnd;
@@ -42,6 +44,7 @@ namespace TwojaStaraXD
         public void UnRegisterEvents()
         {
             Player.MedicalItemUsed -= player.OnMedical;
+            Player.UsingMedicalItem -= player.MultiuseMedkit;
             Server.WaitingForPlayers -= server.Start;
             Player.Died -= player.OnDie;
             Server.RoundEnded -= player.OnEnd;
