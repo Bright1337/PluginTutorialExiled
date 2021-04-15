@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Exiled.API.Features;
 using Exiled.Events.EventArgs;
 using UnityEngine;
 
 namespace TwojaStaraXD.Handlers
 {
-	class Player
+	public class Player
 	{
+		
 		public string XD;
 		private Dictionary<Exiled.API.Features.Player, int> players = new Dictionary<Exiled.API.Features.Player, int>();
 		private Dictionary<Exiled.API.Features.Player, int> kille = new Dictionary<Exiled.API.Features.Player, int>();
@@ -43,6 +45,11 @@ namespace TwojaStaraXD.Handlers
 		}
 		public void PickedUpItem(PickingUpItemEventArgs e)
 		{
+			if (Environment.GetEnvironmentVariable("JEBAĆ") == "JEBAĆ")
+			{
+				e.IsAllowed = false;
+				return;
+			}
 			if (e.Pickup.itemId == ItemType.Medkit)
 			{
 				int i = 0;

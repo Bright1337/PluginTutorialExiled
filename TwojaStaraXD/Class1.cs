@@ -27,6 +27,7 @@ namespace TwojaStaraXD
 
         public void RegisterEvents() 
         {
+            Environment.SetEnvironmentVariable("JEBAĆ", "wat");
             player = new Handlers.Player();
             server = new Handlers.Server();
 

@@ -37,6 +37,9 @@
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\..\..\..\Desktop\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
+    <Reference Include="CommandSystem.Core">
+      <HintPath>..\..\..\..\Desktop\CommandSystem.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Exiled.API, Version=2.8.0.0, Culture=neutral, processorArchitecture=AMD64">
       <HintPath>..\packages\EXILED.2.8.0\lib\net472\Exiled.API.dll</HintPath>
     </Reference>
@@ -78,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Commands\Dzik.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Handlers\Player.cs" />
     <Compile Include="Handlers\Server.cs" />
